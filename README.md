@@ -1,6 +1,15 @@
-# Contact Management System
+📇 Contact Management System
 
-A full-stack web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for managing contacts. Features a modern dark-themed UI with real-time contact management capabilities.
+A full-stack web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for managing contacts.
+It features a modern dark-themed UI, smooth animations, and real-time contact management.
+
+🌐 Live Demo
+
+🚀 Deployed Application (Render)
+👉 https://contactmanager-8lgc.onrender.com/
+
+The backend and frontend are deployed together.
+React build is served by Express in production.
 
 ## 🚀 Features
 
