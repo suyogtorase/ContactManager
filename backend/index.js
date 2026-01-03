@@ -30,12 +30,18 @@ mongoose
 
 app.use('/api', contactRouter);
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+// Catch-all handler: send back React's index.html file for SPA routing
+// This should be last to catch all non-API routes
+app.use((req, res) => {
+  // Don't serve index.html for API routes (should already be handled above)
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+  } else {
+    res.status(404).json({ error: 'API route not found' });
+  }
 });
 
 
