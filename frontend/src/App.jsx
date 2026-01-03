@@ -12,16 +12,16 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-indigo-900 py-12 px-4">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 via-slate-900 to-indigo-900 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <header className="text-center mb-12">
           <div className="inline-block mb-4">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-blue-500/50">
+            <div className="w-16 h-16 bg-linear-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-blue-500/50">
               <Users className="w-8 h-8 text-white" />
             </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 pb-2">
+          <h1 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 pb-2">
             Contact Manager
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -36,7 +36,7 @@ const App = () => {
               onClick={() => setActiveView('form')}
               className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
                 activeView === 'form'
-                  ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md'
+                  ? 'bg-linear-to-r from-blue-500 to-indigo-600 text-white shadow-md'
                   : 'text-gray-300 hover:text-white'
               }`}
             >
@@ -49,7 +49,7 @@ const App = () => {
               onClick={() => setActiveView('list')}
               className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
                 activeView === 'list'
-                  ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md'
+                  ? 'bg-linear-to-r from-blue-500 to-indigo-600 text-white shadow-md'
                   : 'text-gray-300 hover:text-white'
               }`}
             >

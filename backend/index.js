@@ -16,7 +16,9 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URL,{
+            dbName : "newClone",
+        })
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => {
     console.error("MongoDB connection error:", err.message);
@@ -25,7 +27,8 @@ mongoose
 
 app.use('/api', contactRouter);
 
-app.use(express.static(path.join(__dirname, "frontend", "dist")));
+
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 app.use((req, res) => {
   res.sendFile(
