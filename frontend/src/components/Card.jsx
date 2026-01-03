@@ -34,7 +34,7 @@ const Card = ({ contact, onDelete }) => {
     setShowConfirmModal(false);
     
     try {
-      const { data } = await axios.delete(`http://localhost:5000/api/delete-contact/${contact._id}`);
+      const { data } = await axios.delete(`/api/delete-contact/${contact._id}`);
       
       if (data.success) {
         if (onDelete) {
