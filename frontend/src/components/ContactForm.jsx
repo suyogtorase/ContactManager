@@ -103,7 +103,7 @@ const ContactForm = ({ onContactAdded }) => {
     try {
       const phoneDigits = contact.phone.replace(/\D/g, '');
       
-      const { data } = await axios.post('http://localhost:5000/api/submit-contact', {
+      const { data } = await axios.post('/api/submit-contact', {
         name: contact.name.trim(),
         email: contact.email.trim(),
         phone: phoneDigits,
